@@ -1,0 +1,6 @@
+---
+path: boom
+# bundle id = domain.id
+domain: com.fklingler.alfred
+id: boom
+
