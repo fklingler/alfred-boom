@@ -40,7 +40,7 @@
 				<key>runningsubtext</key>
 				<string>Please Wait...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby ./main.rb {query}</string>
+				<string>/usr/bin/ruby ./boom.rb {query}</string>
 				<key>subtext</key>
 				<string>Boom.</string>
 				<key>title</key>
