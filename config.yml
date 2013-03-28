@@ -1,6 +1,7 @@
+# bundle_id = "domain.id"
+# path is the relative path to the workflow in the project root
 ---
-path: boom
-# bundle id = domain.id
-domain: com.fklingler.alfred
-id: boom
+path: workflow
+domain: me.zhaowu
+id: alfred2-ruby-template
 
