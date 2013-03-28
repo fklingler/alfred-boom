@@ -3,10 +3,23 @@
 
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require 'bundle/bundler/setup'
-require 'alfred'
 
 require 'boom'
 
-Dir[File.dirname(__FILE__) + '/lib/**/*.rb'].each {|file| require file }
+command = ARGV.shift
 
-Boom::Alfred.execute(*ARGV)
+if command == 'filter'
+  require './lib/boom/list'
+  require './lib/boom/item'
+  require './lib/boom/storage/base'
+
+  require 'alfred'
+  require './lib/alfred/feedback_item'
+
+  require './lib/boom/alfred'
+  require './lib/boom/alfred/filter'
+else
+  require './lib/boom/alfred/action'
+end
+
+Boom::Alfred.const_get(command.capitalize).execute(*ARGV)

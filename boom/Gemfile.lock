@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    alfred-workflow (1.1.1)
+    alfred-workflow (1.2.7)
       logging (~> 1.8.0)
       plist (~> 3.1.0)
     boom (0.2.1)

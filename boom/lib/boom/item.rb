@@ -2,14 +2,25 @@
 
 module Boom
   class Item
-    def to_alfred_fb_item(list)
+    attr_accessor :list
+
+    def to_alfred_fb_item(opts = {})
+      opts[:show_list_title] ||= false
+      title = name
+      title += " (#{list.name})" if list && opts[:show_list_title]
+
+      opts[:action] ||= "copy"
+
+      autocomplete = "#{list.name} #{name}"
+      autocomplete = "#{opts[:query_prefix]} #{autocomplete}" if opts[:query_prefix]
+
       {
-        :uid          => "#{Alfred.bundle_id}-#{list.name}-#{name}",
-        :title        => "#{name}",
-        :subtitle     => "#{value}",
-        :arg          => "#{url}",
-        :valid        => "no",
-        :autocomplete => "#{name}"
+        :uid          => "#{Alfred.bundle_id} #{list.name + ' ' if list}#{name}",
+        :title        => title,
+        :subtitle     => value,
+        :arg          => "#{opts[:action]} #{list.name} #{name}",
+        :valid        => "yes",
+        :autocomplete => autocomplete
       }
     end
   end
