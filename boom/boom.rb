@@ -14,7 +14,8 @@ if command == 'filter'
   require './lib/boom/storage/base'
 
   require 'alfred'
-  require './lib/alfred/feedback_item'
+  require './lib/alfred/feedback/item'
+  require './lib/alfred/feedback/file_item'
 
   require './lib/boom/alfred'
   require './lib/boom/alfred/filter'
