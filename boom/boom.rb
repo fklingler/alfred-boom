@@ -1,8 +1,8 @@
-#!/usr/bin/env ruby
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
 # encoding: utf-8
 
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
-require 'bundle/bundler/setup'
+require File.join(File.dirname(__FILE__), 'bundle/bundler/setup')
 
 require 'boom'
 
