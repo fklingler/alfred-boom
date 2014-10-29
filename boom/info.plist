@@ -84,7 +84,7 @@
 				<key>runningsubtext</key>
 				<string>Please Wait...</string>
 				<key>script</key>
-				<string>/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby ./boom.rb filter {query}</string>
+				<string>/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby ./boom.rb filter {query}</string>
 				<key>subtext</key>
 				<string>Boom.</string>
 				<key>title</key>
@@ -107,7 +107,7 @@
 				<key>escaping</key>
 				<integer>62</integer>
 				<key>script</key>
-				<string>/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby ./boom.rb action {query}</string>
+				<string>/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby ./boom.rb action {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
