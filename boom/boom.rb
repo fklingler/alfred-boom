@@ -1,6 +1,4 @@
-#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
-# encoding: utf-8
-
+Encoding::default_external = Encoding::UTF_8 if defined? Encoding
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require File.join(File.dirname(__FILE__), 'bundle/bundler/setup')
 
